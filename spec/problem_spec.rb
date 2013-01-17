@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "A Problem" do
+describe Problem do
   before(:each) do
     @problem = Problem.new
     @features = [ Node.features(0.2,0.3,0.4,0.4),

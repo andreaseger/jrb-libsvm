@@ -1,19 +1,19 @@
 require "spec_helper"
 
-describe "A Parameter has accessors for" do
+describe Parameter do
   before do
-    @p = Libsvm::Parameter.new
+    @p = Libsvm::SvmParameter.new
   end
   it "int svm_type" do
-    Parameter::C_SVC.should == 0
-    @p.svm_type = Parameter::C_SVC
-    @p.svm_type.should == Parameter::C_SVC
+    SvmType::C_SVC.should == 0
+    @p.svm_type = SvmType::C_SVC
+    @p.svm_type.should == SvmType::C_SVC
   end
 
   it "int kernel_type" do
-    Parameter::RBF.should == 2
-    @p.kernel_type = Parameter::RBF
-    @p.kernel_type.should == Parameter::RBF
+    KernelType::RBF.should == 2
+    @p.kernel_type = KernelType::RBF
+    @p.kernel_type.should == KernelType::RBF
   end
 
   it "int degree" do

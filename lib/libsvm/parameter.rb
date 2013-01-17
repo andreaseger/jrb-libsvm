@@ -13,4 +13,19 @@ module Libsvm
     end
   end
   SvmParameter = Parameter
+
+  module KernelType
+    LINEAR = Parameter::LINEAR
+    POLY = Parameter::POLY
+    RBF = Parameter::RBF
+    SIGMOID = Parameter::SIGMOID
+    PRECOMPUTED = Parameter::PRECOMPUTED
+  end
+  module SvmType
+    C_SVC = Parameter::C_SVC
+    NU_SVC = Parameter::NU_SVC
+    ONE_CLASS = Parameter::ONE_CLASS
+    EPSILON_SVR = Parameter::EPSILON_SVR
+    NU_SVR = Parameter::NU_SVR
+  end
 end

@@ -1,7 +1,6 @@
 require "spec_helper"
 
-module ModelSpecHelper
-
+describe Model do
   def create_example
     Node.features(0.2, 0.3, 0.4, 0.5)
   end
@@ -25,12 +24,7 @@ module ModelSpecHelper
     parameter
   end
 
-end
-
-describe Model do
-  context "The Libsvm::Model class interface" do
-    include ModelSpecHelper
-
+  context "The class interface" do
     before(:each) do
       @problem = create_problem
       @parameter = create_parameter
@@ -43,8 +37,6 @@ describe Model do
   end
 
   context "A saved model" do
-    include ModelSpecHelper
-
     before(:each) do
       @filename = "tmp/svm_model.model"
       model = Model.train(create_problem, create_parameter)
@@ -62,8 +54,6 @@ describe Model do
   end
 
   context "An Libsvm model" do
-    include ModelSpecHelper
-
     before(:each) do
       @problem = create_problem
       @parameter = create_parameter
