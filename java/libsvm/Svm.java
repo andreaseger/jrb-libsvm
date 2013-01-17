@@ -1305,7 +1305,7 @@ public class Svm {
 
 	static void info(String s) 
 	{
-		svm_print_string.print(s);
+		// svm_print_string.print(s);
 	}
 
 	private static void solve_c_svc(Problem prob, Parameter param,

@@ -18,7 +18,10 @@ module Libsvm
   end
 end
 
+require 'libsvm/parameter'
+require 'libsvm/model'
 require 'libsvm/node'
+require 'libsvm/problem'
 
 class Hash
   include Libsvm::CoreExtensions::Collection

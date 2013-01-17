@@ -1,4 +1,4 @@
-# Jrb::Libsvm
+# jrb-libsvm
 
 **TODO: travis link**
 
@@ -24,6 +24,7 @@ Currently this package includes a modified version of libsvm version 3.14.
 
 - proper Java class names, e.g. svm_model -> Model
 - overloaded `svm_save_model` to be able to save to any DataOutputStream e.g. a String
+- supress all info output written to STDOUT
 
 This gem also includes v.3.11 sources which have a Model which provides value of w-squared for hyperplane.
 These can be found in `java/3-11_w_squared/Svm.java`, to use it just move it into the libsvm folder

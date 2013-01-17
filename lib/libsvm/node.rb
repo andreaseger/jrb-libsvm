@@ -22,10 +22,6 @@ module Libsvm
         end
         array_of_nodes
       end
-
-      def [](index, value)
-        new(index, value)
-      end
     end
 
     def initialize(index=0, value=0.0)
