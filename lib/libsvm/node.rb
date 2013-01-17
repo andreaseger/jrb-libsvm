@@ -29,6 +29,7 @@ module Libsvm
     end
 
     def initialize(index=0, value=0.0)
+      super()
       self.index = index
       self.value = value
     end
