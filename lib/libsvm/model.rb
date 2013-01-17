@@ -28,7 +28,7 @@ module Libsvm
 
     # Return the value of the cost parameter
     def cost
-      self.param.cost
+      self.param.c
     end
 
     # Return the number of classes handled by this model.
