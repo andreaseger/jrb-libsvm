@@ -12,4 +12,5 @@ module Libsvm
       self.weight =  v.values.to_java :double
     end
   end
+  SvmParameter = Parameter
 end

@@ -32,7 +32,42 @@ and recompile the jar (`rake compile`).
 
 ## Dependencies
 
-None.  LIBSVM is bundled with the project.  Just install and go!
+This is a short example of how to use the gem.
+
+```ruby
+require 'libsvm'
+
+# This library is namespaced.
+problem = Libsvm::Problem.new
+parameter = Libsvm::Parameter.new
+
+parameter.cache_size = 1 # in megabytes
+
+parameter.eps = 0.001
+parameter.c = 10
+
+examples = [ [1,0,1], [-1,0,-1] ].map {|ary| Libsvm::Node.features(ary) }
+labels = [1, -1]
+
+problem.set_examples(labels, examples)
+
+model = Libsvm::Model.train(problem, parameter)
+
+pred = model.predict(Libsvm::Node.features(1, 1, 1))
+puts "Example [1, 1, 1] - Predicted #{pred}"
+```
+
+If you want to rely on Bundler for loading dependencies in a project,
+(i.e. use `Bundler.require` or use an environment that relies on it,
+like Rails), then you will need to specify rb-libsvm in the Gemfile
+like this:
+
+```ruby
+gem 'rb-libsvm', require: 'libsvm'
+```
+
+This is because the loadable name (`libsvm`) is different from the
+gem's name (`rb-libsvm`).
 
 ## Installation
 
