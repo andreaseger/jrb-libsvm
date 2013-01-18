@@ -1,6 +1,6 @@
 # jrb-libsvm
 
-**TODO: travis link**
+[![Build Status](https://travis-ci.org/sch1zo/jrb-libsvm.png?branch=master)](undefined)
 
 This jruby gem exposes more or less exactly the same interface as [rb-libsvm][].
 Goal was to make them as interchangeable as possible.
