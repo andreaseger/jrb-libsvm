@@ -1,3 +1,9 @@
+java_import 'java.io.DataOutputStream'
+java_import 'java.io.ByteArrayOutputStream'
+
+java_import 'java.io.StringReader'
+java_import 'java.io.BufferedReader'
+
 module Libsvm
   class Model
     class << self

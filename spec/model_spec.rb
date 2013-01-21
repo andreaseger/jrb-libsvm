@@ -41,10 +41,16 @@ describe Model do
       @filename = "tmp/svm_model.model"
       model = Model.train(create_problem, create_parameter)
       model.save(@filename)
+      @model_string = model.to_s
     end
 
-    it "can be loaded" do
+    it "can be loaded from a file" do
       model = Model.load(@filename)
+      model.should_not be_nil
+    end
+
+    it "can be loaded from a string" do
+      model = Model.load_from_string @model_string
       model.should_not be_nil
     end
 
@@ -59,12 +65,23 @@ describe Model do
       @parameter = create_parameter
       @model = Model.train(@problem, @parameter)
       @file_path = "tmp/svm_model.model"
+    end
+    after(:each) do
       File.delete(@file_path) if File.exists?(@file_path)
     end
 
     it "can be saved to a file" do
       @model.save(@file_path)
       File.exist?(@file_path).should be_true
+    end
+
+    it "can be serialized to a string" do
+      @model.serialize.should_not be_empty
+    end
+
+    it "should generate the same text for serialize and save" do
+      @model.save(@file_path)
+      @model.serialize.should == IO.read(@file_path)
     end
 
     it "can be asked for it's svm_type" do
