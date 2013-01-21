@@ -19,6 +19,4 @@ Gem::Specification.new do |gem|
 
   # specify any dependencies here
   gem.add_development_dependency('rspec', '>= 2.7.0')
-
-  gem.extensions << 'java/make_jar.rb'
 end
