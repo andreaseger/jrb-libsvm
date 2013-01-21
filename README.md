@@ -32,6 +32,24 @@ and recompile the jar (`rake compile`).
 
 ## Dependencies
 
+None.  LIBSVM is bundled with the project.  Just install and go!
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'jrb-libsvm'
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install jrb-libsvm
+
+## Usage
+
 This is a short example of how to use the gem.
 
 ```ruby
@@ -68,24 +86,6 @@ gem 'rb-libsvm', require: 'libsvm'
 
 This is because the loadable name (`libsvm`) is different from the
 gem's name (`rb-libsvm`).
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'jrb-libsvm'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jrb-libsvm
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## License
 
