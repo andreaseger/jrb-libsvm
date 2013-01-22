@@ -6,6 +6,7 @@ require 'libsvm/version'
 Gem::Specification.new do |gem|
   gem.name          = "jrb-libsvm"
   gem.version       = Libsvm::VERSION
+  gem.platform      = 'java'
   gem.authors       = ["Andreas Eger"]
   gem.email         = ["dev@eger-andreas.de"]
   gem.description   = %q{JRuby language bindings for libsvm}
