@@ -26,7 +26,7 @@ module Libsvm
         self.y[i] = label
       end
 
-      return self
+      return labels.size
     end
     def examples
       return self.y, self.x
