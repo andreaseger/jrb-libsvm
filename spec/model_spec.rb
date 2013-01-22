@@ -54,6 +54,12 @@ describe Model do
       model.should_not be_nil
     end
 
+    it "should do the same for load and load_from_string" do
+      model = Model.load @filename
+      model2 = Model.load_from_string @model_string
+      model.serialize.should == model2.serialize
+    end
+
     after(:each) do
       File.delete(@filename) rescue nil
     end
@@ -99,9 +105,10 @@ describe Model do
     it "can predict probability" do
       prediction, probabilities = @model.predict_probability(create_example)
       prediction.should_not be_nil
+      probabilities.should have(@model.classes).items
       probabilities.each { |e| e.should_not be_nil }
     end
-    it "can predict probability with nil array" do
+    it "can predict with block" do
       prediction = @model.predict(create_example) do |probabilities|
         probabilities.should be_all { |p| p.kind_of? Float }
         probabilities.count.should == @model.classes
