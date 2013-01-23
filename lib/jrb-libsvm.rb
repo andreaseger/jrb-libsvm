@@ -1,4 +1,4 @@
-require_relative "libsvm/version"
+require_relative "jrb-libsvm/version"
 require "java"
 require_relative "java/libsvm"
 
@@ -18,10 +18,10 @@ module Libsvm
   end
 end
 
-require_relative 'libsvm/parameter'
-require_relative 'libsvm/model'
-require_relative 'libsvm/node'
-require_relative 'libsvm/problem'
+require_relative 'jrb-libsvm/parameter'
+require_relative 'jrb-libsvm/model'
+require_relative 'jrb-libsvm/node'
+require_relative 'jrb-libsvm/problem'
 
 class Hash
   include Libsvm::CoreExtensions::Collection

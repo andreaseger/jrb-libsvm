@@ -1,3 +1,3 @@
-module JrbLibsvm
+module Libsvm
   VERSION = "0.1.0"
 end

@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'libsvm/version'
+require 'jrb-libsvm/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "jrb-libsvm"
-  gem.version       = JrbLibsvm::VERSION
+  gem.version       = Libsvm::VERSION
   gem.platform      = 'java'
   gem.authors       = ["Andreas Eger"]
   gem.email         = ["dev@eger-andreas.de"]
