@@ -53,7 +53,7 @@ Or install it yourself as:
 This is a short example of how to use the gem.
 
 ```ruby
-require 'libsvm'
+require 'jrb-libsvm'
 
 # This library is namespaced.
 problem = Libsvm::Problem.new
