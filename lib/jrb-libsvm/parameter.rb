@@ -40,6 +40,7 @@ module Libsvm
       self.p           = args.fetch(:p, 0.1)
       self.shrinking   = args.fetch(:shrinking, 1)
       self.probability = args.fetch(:probability, 0)
+      self.cache_size = args.fetch(:cache_size, 1)
 
       unless self.nu > 0.0 and self.nu <= 1.0
         raise ArgumentError "Invalid value of nu #{self.nu}, should be in (0,1]"
