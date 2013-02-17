@@ -72,7 +72,7 @@ module Libsvm
     end
 
     # Load model from string.
-    def self.load_from_string string
+    def self.parse string
       reader = BufferedReader.new(StringReader.new(string))
       Svm.svm_load_model(reader)
     rescue java.io.IOException

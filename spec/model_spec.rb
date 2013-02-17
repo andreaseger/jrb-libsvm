@@ -50,13 +50,13 @@ describe Model do
     end
 
     it "can be loaded from a string" do
-      model = Model.load_from_string @model_string
+      model = Model.parse @model_string
       model.should_not be_nil
     end
 
     it "should do the same for load and load_from_string" do
       model = Model.load @filename
-      model2 = Model.load_from_string @model_string
+      model2 = Model.parse @model_string
       model.serialize.should == model2.serialize
     end
 
