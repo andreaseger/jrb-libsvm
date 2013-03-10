@@ -20,7 +20,8 @@ reference when configuring the training parameters.
 
 ## Java Libary
 
-Currently this package includes a modified version of libsvm version 3.14.
+Currently this package includes a modified version of libsvm version
+3.16.
 
 - proper Java class names, e.g. svm_model -> Model
 - overloaded `svm_save_model` to be able to save to any DataOutputStream e.g. a String
