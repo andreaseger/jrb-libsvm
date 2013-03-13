@@ -76,18 +76,6 @@ pred = model.predict(Libsvm::Node.features(1, 1, 1))
 puts "Example [1, 1, 1] - Predicted #{pred}"
 ```
 
-If you want to rely on Bundler for loading dependencies in a project,
-(i.e. use `Bundler.require` or use an environment that relies on it,
-like Rails), then you will need to specify rb-libsvm in the Gemfile
-like this:
-
-```ruby
-gem 'rb-libsvm', require: 'libsvm'
-```
-
-This is because the loadable name (`libsvm`) is different from the
-gem's name (`rb-libsvm`).
-
 ## License
 
 This software can be freely used under the terms of the MIT license,
@@ -96,11 +84,6 @@ see file MIT-LICENSE.
 This package includes the source of LIBSVM, which is free to use under
 the license in the file LIBSVM-LICENSE.
 
-## Posts about using SVMs with Ruby
-
-http://neovintage.blogspot.com/2011/11/text-classification-using-support.html
-
-http://www.igvita.com/2008/01/07/support-vector-machines-svm-in-ruby/
 
 ## Contributing
 
